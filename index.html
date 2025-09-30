@@ -7,7 +7,7 @@
     <meta name="description" content="Portofolio Fahrizal Aulia Rachman, seorang Sarjana Teknik Informatika dengan keahlian dalam pengembangan web dan multimedia menggunakan Laravel, CodeIgniter, dan Flutter.">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +40,7 @@
             <div class="container">
                 <h2 class="section-title">Tentang Saya</h2>
                 <div class="about-content">
-                    <img src="assets/profile.jpg" alt="Foto Profil Fahrizal Aulia Rachman" class="profile-pic">
+                    <img src="assets/foto.JPG" alt="Foto Profil Fahrizal Aulia Rachman" class="profile-pic pt-1">
                     <div class="about-text">
                         <p>Sebagai lulusan Teknik Informatika dari Universitas Wijaya Putra, saya memiliki motivasi tinggi untuk terus belajar. Saya berpengalaman bekerja secara mandiri maupun dalam tim , termasuk saat menjabat sebagai **Multimedia Developer - Virtual Reality** di PT Maxxima Innovatie Engineering , di mana saya mengembangkan konten VR dan mengelola website manajemen konten.</p>
 
@@ -66,15 +66,35 @@
                 <div class="portfolio-grid">
 
                     <div class="portfolio-card">
-                        <img src="assets/proyek-zoo.jpg" alt="Screenshot Proyek Surabaya Zoo">
+                        <a href="assets/mobile.jpeg" data-lightbox="portfolio-gallery" data-title="Aplikasi Mobile Kebun Binatang Surabaya - Dibuat dengan Flutter untuk meningkatkan pengalaman pengunjung melalui peta interaktif dan informasi satwa.">
+                            <img src="assets/mobile.jpeg" alt="Screenshot Aplikasi Mobile KBS">
+                        </a>
                         <div class="card-content">
-                            <h3>Aplikasi Mobile & Website Surabaya Zoo</h3>
-                            <p>Solusi digital terintegrasi untuk Kebun Binatang Surabaya, mencakup aplikasi mobile dan website manajemen.</p>
+                            <h3>Aplikasi Mobile Kebun Binatang Surabaya</h3>
+                            <p>Aplikasi mobile cross-platform untuk meningkatkan pengalaman pengunjung dengan fitur peta interaktif dan informasi satwa.</p>
                             <div class="project-tags">
-                                <span>Flutter </span>
-                                <span>Laravel </span>
-                                <span>Tailwind </span>
-                                <span>MySQL </span>
+                                <span>Flutter</span>
+                                <span>API Integration</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn-link">Lihat di App Store</a>
+                                <a href="#" class="btn-link">Kode (GitHub)</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card">
+                        <a href="assets/kbs.png" data-lightbox="portfolio-gallery" data-title="Website & CMS Kebun Binatang Surabaya - Dibangun dengan Laravel dan Tailwind CSS untuk manajemen konten dan data.">
+                            <img src="assets/kbs.png" alt="Screenshot Website KBS">
+                        </a>
+                        <div class="card-content">
+                            <h3>Website & CMS Kebun Binatang Surabaya</h3>
+                            <p>Website informatif publik beserta Content Management System (CMS) untuk mengelola data satwa, event, dan konten.</p>
+                            <div class="project-tags">
+                                <span>Laravel</span>
+                                <span>Tailwind CSS</span>
+                                <span>MySQL</span>
+                                <span>REST API</span>
                             </div>
                             <div class="project-links">
                                 <a href="#" class="btn-link">Live Demo</a>
@@ -84,15 +104,17 @@
                     </div>
 
                     <div class="portfolio-card">
-                        <img src="assets/proyek-simdabesmiwa.jpg" alt="Screenshot Proyek Simdabesmiwa">
+                        <a href="assets/simdabesmiwa.id.png" data-lightbox="portfolio-gallery" data-title="Website Simdabesmiwa - Sistem informasi untuk manajemen data beasiswa mahasiswa.">
+                            <img src="assets/simdabesmiwa.id.png" alt="Screenshot Proyek Simdabesmiwa">
+                        </a>
                         <div class="card-content">
                             <h3>Website Simdabesmiwa</h3>
-                            <p>Sistem informasi untuk manajemen data beasiswa mahasiswa, dibangun untuk efisiensi proses administrasi.</p>
-                             <div class="project-tags">
-                                <span>Laravel </span>
-                                <span>Bootstrap </span>
-                                <span>JavaScript </span>
-                                <span>MySQL </span>
+                            <p>Sistem informasi untuk manajemen data beasiswa mahasiswa, dibangun untuk efisiensi proses administrasi dan seleksi.</p>
+                            <div class="project-tags">
+                                <span>Laravel</span>
+                                <span>Bootstrap</span>
+                                <span>JavaScript</span>
+                                <span>MySQL</span>
                             </div>
                             <div class="project-links">
                                 <a href="#" class="btn-link">Live Demo</a>
@@ -102,15 +124,17 @@
                     </div>
 
                     <div class="portfolio-card">
-                        <img src="assets/proyek-pijaridekreasi.jpg" alt="Screenshot Proyek Pijaridekreasi">
+                        <a href="assets/pijar.jpeg" data-lightbox="portfolio-gallery" data-title="Website Pijaridekreasi - Platform web dinamis untuk kegiatan kreatif dan pendaftaran acara.">
+                            <img src="assets/pijar.jpeg" alt="Screenshot Proyek Pijaridekreasi">
+                        </a>
                         <div class="card-content">
                             <h3>Website Pijaridekreasi</h3>
                             <p>Platform web dinamis yang dikembangkan sebagai pusat kegiatan kreatif dan pendaftaran acara online.</p>
                             <div class="project-tags">
-                                <span>Laravel </span>
-                                <span>Bootstrap </span>
-                                <span>JavaScript </span>
-                                <span>MySQL </span>
+                                <span>Laravel</span>
+                                <span>Bootstrap</span>
+                                <span>JavaScript</span>
+                                <span>MySQL</span>
                             </div>
                             <div class="project-links">
                                 <a href="#" class="btn-link">Live Demo</a>
@@ -120,15 +144,17 @@
                     </div>
 
                     <div class="portfolio-card">
-                        <img src="assets/proyek-aqucui.jpg" alt="Screenshot Proyek AQUCUI">
+                        <a href="assets/aqucui.png" data-lightbox="portfolio-gallery" data-title="Website AQUCUI - Aplikasi web fungsional dengan framework CodeIgniter.">
+                            <img src="assets/aqucui.png" alt="Screenshot Proyek AQUCUI">
+                        </a>
                         <div class="card-content">
                             <h3>Website AQUCUI</h3>
                             <p>Aplikasi web fungsional yang dikembangkan dengan framework CodeIgniter untuk kebutuhan manajemen data.</p>
                             <div class="project-tags">
-                                <span>CodeIgniter </span>
-                                <span>Bootstrap </span>
-                                <span>JavaScript </span>
-                                <span>MySQL </span>
+                                <span>CodeIgniter</span>
+                                <span>Bootstrap</span>
+                                <span>JavaScript</span>
+                                <span>MySQL</span>
                             </div>
                             <div class="project-links">
                                 <a href="#" class="btn-link">Live Demo</a>
@@ -136,6 +162,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -160,5 +187,7 @@
     </footer>
 
     <script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 </body>
 </html>
