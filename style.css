@@ -334,33 +334,37 @@ section {
 }
 /* --- KUSTOMISASI STYLE LIGHTBOX V2 (LEBIH TEGAS) --- */
 
-/* Paksa CONTAINER LUAR agar tidak melebihi 800px */
-.lb-outerContainer {
-    max-width: 800px !important;
-    width: auto !important;
-    margin: 0 auto;
+/* --- KUSTOMISASI STYLE LIGHTBOX V3 (Fokus pada Aspect Ratio) --- */
 
+/* Container luar kini lebih fleksibel, tanpa batasan lebar tetap */
+.lb-outerContainer {
     background-color: transparent !important;
     border: none !important;
     box-shadow: none !important;
     border-radius: 16px;
+    /* max-width dan width DIHAPUS dari sini agar fleksibel */
 }
 
-/* Atur GAMBAR di dalam container */
+/* Atur GAMBAR sebagai penentu utama ukuran */
 .lightbox .lb-image {
-    width: 100% !important;
+    /* Biarkan browser menentukan dimensi terbaik sesuai aspect ratio */
+    width: auto !important;
     height: auto !important;
-    max-height: 85vh !important; /* Penting untuk gambar vertikal */
 
+    /* TERAPKAN BATASAN LANGSUNG PADA GAMBAR */
+    max-width: 800px !important;  /* Batas untuk gambar landscape */
+    max-height: 85vh !important; /* Batas untuk gambar portrait (tinggi) */
+
+    /* Gaya visual */
     border-radius: 16px;
     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
 }
 
 /* Atur CONTAINER CAPTION di bawah */
 .lb-dataContainer {
-    max-width: 100% !important;
-    box-sizing: border-box;
-    border-radius: 16px;
+    width: 100%;
+    box-sizing: border-box; /* Penting! */
+    border-radius: 16px; /* Sudut disamakan */
     background-color: rgba(30, 30, 30, 0.9);
     padding-top: 10px;
     margin-top: -5px;
@@ -379,54 +383,34 @@ section {
 
 /* Gaya Tombol Close */
 .lb-close {
-    /* Pastikan tombol close berada di pojok kanan atas */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23EAEAEA'%3E%3Cpath d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3Cpath d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'%3E%3C/path%3E%3C/svg%3E") !important; /* Ikon X putih */
-    background-size: 24px 24px; /* Ukuran ikon */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23EAEAEA'%3E%3Cpath d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3Cpath d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'%3E%3C/path%3E%3C/svg%3E") !important;
+    background-size: 24px 24px;
     background-repeat: no-repeat;
     background-position: center;
     width: 30px !important;
     height: 30px !important;
-    right: -15px !important; /* Geser sedikit ke luar container gambar */
-    top: -15px !important; /* Geser sedikit ke atas container gambar */
+    right: -15px !important;
+    top: -15px !important;
     padding: 0 !important;
-    opacity: 1 !important; /* Pastikan selalu terlihat */
-    border-radius: 50%; /* Bentuk lingkaran */
-    background-color: rgba(0, 0, 0, 0.6) !important; /* Background gelap agar menonjol */
+    opacity: 1 !important;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.6) !important;
     border: 1px solid rgba(255, 255, 255, 0.2);
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .lb-close:hover {
-    background-color: rgba(52, 152, 219, 0.8) !important; /* Warna aksen saat hover */
+    background-color: rgba(52, 152, 219, 0.8) !important;
 }
 
 /* Gaya Tombol Navigasi (Prev/Next) */
 .lb-prev, .lb-next {
     opacity: 0.8;
     transition: opacity 0.3s ease;
-    width: 40px !important; /* Ukuran tombol lebih besar */
-    height: 40px !important;
-    border-radius: 50%; /* Bentuk lingkaran */
-    background-color: rgba(0, 0, 0, 0.5) !important;
-    margin-top: -20px !important; /* Tengahkan vertikal */
 }
-.lb-prev { left: 10px !important; } /* Posisi di kiri */
-.lb-next { right: 10px !important; } /* Posisi di kanan */
-
-.lb-prev:hover, .lb-next:hover {
-    opacity: 1;
-    background-color: rgba(52, 152, 219, 0.7) !important; /* Warna aksen saat hover */
-}
-/* Menyembunyikan teks Prev/Next default dari Lightbox */
-.lb-prev span, .lb-next span {
-    display: none;
-}
-/* Ganti dengan ikon Font Awesome untuk Prev/Next (jika ingin) */
-.lb-prev { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23EAEAEA'%3E%3Cpath d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3Cpath d='M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z'%3E%3C/path%3E%3C/svg%3E") !important; background-repeat: no-repeat; background-position: center; background-size: 24px 24px; }
-.lb-next { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23EAEAEA'%3E%3Cpath d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3Cpath d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'%3E%3C/path%3E%3C/svg%3E") !important; background-repeat: no-repeat; background-position: center; background-size: 24px 24px; }
 
 /* Overlay Background */
 .lb-overlay {
-    background-color: rgba(0, 0, 0, 0.8) !important; /* Lebih gelap agar gambar lebih menonjol */
+    background-color: rgba(0, 0, 0, 0.8) !important;
 }
